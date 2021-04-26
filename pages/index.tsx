@@ -14,7 +14,15 @@ export async function getStaticProps() {
   }
 }
 
-export default function Home({allPostsData}) {
+type Props = {
+  allPostsData: {
+    id: string
+    title: string
+    date: string
+  }[]
+}
+
+export default function Home({allPostsData}: Props) {
   return (
     <Layout home>
       <Head>
